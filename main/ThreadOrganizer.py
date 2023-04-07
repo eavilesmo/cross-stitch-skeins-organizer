@@ -32,3 +32,6 @@ elif user_input == "5":
     file_path = presenter.ask_for_file_path()
     skein_repository.find_skeins_in_bulk(file_path)
 
+else:
+    presenter.invalid_option()
+

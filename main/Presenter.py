@@ -15,3 +15,6 @@ class Presenter:
     def ask_for_file_path(self):
         print("Please enter path to the file with the skeins' number")
         return input()
+
+    def invalid_option(self):
+        print("Sorry, that is not a valid option")
