@@ -34,4 +34,3 @@ elif user_input == "5":
 
 else:
     presenter.invalid_option()
-
