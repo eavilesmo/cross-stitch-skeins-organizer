@@ -1,10 +1,10 @@
 from main.ConversionListInitializer import ConversionListInitializer
-from main.ThreadConverter import ThreadConverter
+from main.SkeinConverter import SkeinConverter
 from main.Presenter import Presenter
-from main.ThreadRepository import ThreadRepository
+from main.SkeinRepository import SkeinRepository
 
-thread_converter = ThreadConverter()
-thread_repository = ThreadRepository()
+thread_converter = SkeinConverter()
+thread_repository = SkeinRepository()
 
 conversionListInitializer = ConversionListInitializer()
 conversion_list = conversionListInitializer.initialize()
@@ -26,9 +26,9 @@ elif user_input == "3":
 
 elif user_input == "4":
     skein_number = presenter.ask_for_skein_number()
-    thread_repository.find_thread(skein_number)
+    thread_repository.find_skein(skein_number)
 
 elif user_input == "5":
     file_path = presenter.ask_for_file_path()
-    thread_repository.find_thread_in_bulk(file_path)
+    thread_repository.find_skeins_in_bulk(file_path)
 

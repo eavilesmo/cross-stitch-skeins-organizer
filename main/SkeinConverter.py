@@ -1,4 +1,4 @@
-class ThreadConverter:
+class SkeinConverter:
 
     def convert_dmc_to_anchor(self, skein_number, conversion_list):
         for key, value in conversion_list.items():

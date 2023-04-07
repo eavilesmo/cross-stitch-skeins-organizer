@@ -1,8 +1,8 @@
-class ThreadRepository:
+class SkeinRepository:
     dmc_skeins_available = {}
     anchor_skeins_available = {}
 
-    def find_thread(self, skein_number):
+    def find_skein(self, skein_number):
         self.initialize_skein_collections()
         if skein_number in self.dmc_skeins_available:
             message = "You have the skein number {} for DMC/Rosace and you have {} skeins available"
@@ -11,11 +11,11 @@ class ThreadRepository:
             message = "You have the skein number {} for Anchor and you have {} skeins available"
             print(message.format(skein_number, self.anchor_skeins_available[skein_number]))
 
-    def find_thread_in_bulk(self, file_path):
+    def find_skeins_in_bulk(self, file_path):
         with open(file_path, 'r') as skeins_file:
             for line in skeins_file:
                 line = line.rstrip()
-                self.find_thread(line)
+                self.find_skein(line)
                 if not line:
                     continue
 
