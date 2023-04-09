@@ -5,7 +5,7 @@ class SkeinRepository:
     def find_skein(self, skein_number):
         self.initialize_skein_collections()
         if skein_number in self.dmc_skeins_available:
-            message = "You have the skein number {} for DMC/Rosace and you have {} skeins available"
+            message = "You have the skein number {} for DMC and you have {} skeins available"
             print(message.format(skein_number, self.dmc_skeins_available[skein_number]))
         if skein_number in self.anchor_skeins_available:
             message = "You have the skein number {} for Anchor and you have {} skeins available"
@@ -20,7 +20,7 @@ class SkeinRepository:
                     continue
 
     def initialize_skein_collections(self):
-        with open('resources/dmc_rosace_skeins.txt', 'r') as dmc_skeins_file:
+        with open('resources/dmc_skeins.txt', 'r') as dmc_skeins_file:
             for line in dmc_skeins_file:
                 line = line.strip()
                 if not line:
