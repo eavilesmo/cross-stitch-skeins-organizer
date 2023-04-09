@@ -1,14 +1,14 @@
+import sys
+
 from main.SkeinConverter import SkeinConverter
 from main.Presenter import Presenter
 from main.SkeinRepository import SkeinRepository
 
 skein_converter = SkeinConverter()
 skein_repository = SkeinRepository()
-
 presenter = Presenter()
-user_input = presenter.print_welcome()
 
-while user_input != "6":
+while True:
     user_input = presenter.print_welcome()
 
     if user_input == "1":
@@ -26,5 +26,7 @@ while user_input != "6":
     elif user_input == "5":
         file_path = presenter.ask_for_file_path()
         skein_repository.find_skeins_in_bulk(file_path)
+    elif user_input == "6":
+        sys.exit()
     else:
         presenter.invalid_option()

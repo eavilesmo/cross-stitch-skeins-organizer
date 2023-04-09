@@ -20,14 +20,14 @@ class SkeinRepository:
                     continue
 
     def initialize_skein_collections(self):
-        with open('dmc_rosace_skeins.txt', 'r') as dmc_skeins_file:
+        with open('resources/dmc_rosace_skeins.txt', 'r') as dmc_skeins_file:
             for line in dmc_skeins_file:
                 line = line.strip()
                 if not line:
                     continue
                 key, value = line.split(',')
                 self.dmc_skeins_available[key] = value
-        with open('anchor_skeins.txt', 'r') as anchor_skeins_file:
+        with open('resources/anchor_skeins.txt', 'r') as anchor_skeins_file:
             for line in anchor_skeins_file:
                 line = line.strip()
                 if not line:

@@ -1,6 +1,6 @@
 class ConversionListInitializer:
     def initialize(self):
-        with open('conversion_list.txt', 'r') as conversion_file:
+        with open('resources/conversion_list.txt', 'r') as conversion_file:
             conversion_list = {}
             for line in conversion_file:
                 skein_numbers = line.strip().split('\t')
